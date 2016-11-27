@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script
+	src="http://maurizzzio.github.io/function-plot/js/function-plot.js"></script>
+<meta charset="utf-8">
+<title>JS Bin</title>
+</head>
+<body>
+	<div id="demo"></div>
+</body>
+</html>
+
+<script>
+functionPlot({
+	  target: '#demo',
+	  data: [{
+	    fn: 'x^2',
+	    derivative: {
+	      fn: '2x',
+	      updateOnMouseMove: true
+	    }
+	  }]
+	});
+</script>
