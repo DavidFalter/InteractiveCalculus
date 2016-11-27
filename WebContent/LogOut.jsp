@@ -114,60 +114,26 @@ ul.topnav li.icon {
 			style="font-size: 15px;" onclick="myFunction()">☰</a></li>
 	</ul>
 	<div align="center">
-		<form action="LogIn.jsp">
-			<table border="0">
-				<tr>
-					<td>Login:</td>
-					<td><input name="username" class="form-control"></td>
-				</tr>
-				<tr>
-					<td>Password:</td>
-					<td><input type = "" name="password" class="form-control"></td>
-				</tr>
-				<tr>
-					<td>
-						<button class="btn-info" name="action" value="login">Log
-							In</button>
-					</td>
-				</tr>
-			</table>
-
+		<form action="LogOut.jsp">
+						<button class="btn-info" name="action" value="logout">Log Out</button>
 			</center>
 		</form>
 	</div>
 
 	<div>
 		<%
- UserDAO dao = new UserDAO();
  String action = request.getParameter ("action");
- String userName = request.getParameter("username");
- String passWord = request.getParameter("password");
  
- if("login".equals(action))
+ if("logout".equals(action))
  {
- 	List<User> users = dao.selectAll();
- 	
- 	for(User user : users)
- 	{
- 		String un = user.userName;
- 		String pw = user.passWord;
- 		if(user.userName.contains(userName))
- 		{
- 			if(user.passWord.contains(passWord))
- 			{
- 				HttpSession sess = request.getSession(true);
- 				session.setAttribute("name", userName);        
- 				String nme=(String) session.getAttribute("name");
- 				%>
-		<h1 align="center">
-			Welcome
-			<%=userName%></h1>
-		<% 
- 			}	
- 		}
- 	}
+  
+      session.removeAttribute("name");
+      session.invalidate();
+      response.sendRedirect("Main.jsp");
  }
+
  %>
+ 
 	</div>
 
 	<script>

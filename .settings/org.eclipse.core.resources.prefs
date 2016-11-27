@@ -2,5 +2,6 @@ eclipse.preferences.version=1
 encoding//WebContent/CreateAccount.jsp=UTF-8
 encoding//WebContent/DiscussionBoard.jsp=UTF-8
 encoding//WebContent/LogIn.jsp=UTF-8
+encoding//WebContent/LogOut.jsp=UTF-8
 encoding//WebContent/Main.jsp=UTF-8
 encoding//WebContent/Quiz.jsp=UTF-8
