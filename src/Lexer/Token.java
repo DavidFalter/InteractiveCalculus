@@ -1,3 +1,4 @@
+
 package Lexer;
 
 public abstract class Token {
@@ -5,6 +6,6 @@ public abstract class Token {
     public abstract String toString();
     
     public abstract double getValue();
-    public abstract String getName();
     public abstract TokenType getSym();
 }
+

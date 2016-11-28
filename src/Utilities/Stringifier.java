@@ -6,9 +6,6 @@
 package Utilities;
 
 import DataStructureElements.*;
-
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.util.*;
 
 public class Stringifier {
@@ -20,9 +17,6 @@ public class Stringifier {
     }
         
     private static void printExpression(Expression e){
-    	double d;
-    	DecimalFormat df = new DecimalFormat("#.##");
-    	df.setRoundingMode(RoundingMode.CEILING);
         if (e instanceof Sum){
             printSum((Sum) e);
         }
@@ -36,8 +30,7 @@ public class Stringifier {
             string += "x";
         }
         else if (e instanceof Constant){
-        	d = ((Constant) e).getValue();
-            string += df.format(d);
+            string += ((Constant) e).getValue();
         }
         else if (e instanceof Sin){
             string += "sin(";
@@ -80,6 +73,16 @@ public class Stringifier {
             printExpression(((Quotient)e).getNumerator());
             string += ")/(";
             printExpression(((Quotient)e).getDenominator());
+            string += ")";
+        }
+        else if (e instanceof Log){
+            string += "log(";
+            printExpression(e.getExpression());
+            string += ")";
+        }
+        else if (e instanceof Ln){
+            string += "ln(";
+            printExpression(e.getExpression());
             string += ")";
         }
     }
@@ -246,7 +249,7 @@ public class Stringifier {
                 }
             }
             else{
-                printExpression(list.get(i));   
+                printExpressionu(list.get(i));   
             }    
                      
         }

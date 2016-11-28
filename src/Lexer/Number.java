@@ -1,12 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Lexer;
 
-import Lexer.Token;
-import Lexer.TokenType;
+package Lexer;
 
 public class Number extends Token{
     private final double value;
@@ -27,11 +20,7 @@ public class Number extends Token{
         return "\nNumber: " + this.value;
     }
 
-    @Override
-    public String getName() {
-        return "\0";
-    }
-    
+    @Override 
     public TokenType getSym(){
         return this.t;
     }

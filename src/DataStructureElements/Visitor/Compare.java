@@ -7,10 +7,7 @@ package DataStructureElements.Visitor;
 
 
 import DataStructureElements.*;
-import DataStructureElements.UnaryExpression;
-import DataStructureElements.Variable;
 import java.util.Comparator;
-import java.util.List;
 
 /**
  *

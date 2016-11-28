@@ -25,16 +25,6 @@ public class Constant extends TerminalExpression implements Comparable<Constant>
     public void setValue(double value) {
         this.value = value;
     }
-    
-    @Override
-    public Expression getDerivative() {
-        return new Constant(0);
-    }
-
-    @Override
-    public Expression getIntegral() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public Expression getExpression() {

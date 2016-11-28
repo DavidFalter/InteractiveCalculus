@@ -5,10 +5,7 @@
  */
 package DataStructureElements.Visitor;
 
-import DataStructureElements.Container;
-import DataStructureElements.Expression;
-import DataStructureElements.TerminalExpression;
-import DataStructureElements.UnaryExpression;
+import DataStructureElements.*;
 
 /**
  *

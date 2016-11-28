@@ -1,19 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Lexer;
 
 public class Identifier extends Token{
-    private final String name;
     private final TokenType t;
+    private final String name;
     
     public Identifier(String content, TokenType t){
         this.name = content;
         this.t = t;
     }
-    @Override
+
     public String getName(){
         return this.name;
     }
@@ -31,3 +27,4 @@ public class Identifier extends Token{
         return this.t;
     }
 }
+

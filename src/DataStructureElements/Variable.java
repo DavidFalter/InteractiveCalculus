@@ -15,18 +15,6 @@ public class Variable extends TerminalExpression implements Comparable<Variable>
 
     public Variable() {
     }
-    
-    @Override
-    public Expression getDerivative() {
-        return new Constant(1);
-    }
-
-    @Override
-    public Expression getIntegral() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-	
-	
-    }
 
     @Override
     public Expression getExpression() {

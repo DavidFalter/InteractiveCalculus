@@ -5,29 +5,7 @@
  */
 package DataStructureElements.Visitor;
 
-import DataStructureElements.Arccos;
-import DataStructureElements.Arccot;
-import DataStructureElements.Arccsc;
-import DataStructureElements.Arcsec;
-import DataStructureElements.Arcsin;
-import DataStructureElements.Arctan;
-import DataStructureElements.Constant;
-import DataStructureElements.Cos;
-import DataStructureElements.Cot;
-import DataStructureElements.Csc;
-import DataStructureElements.Exponential;
-import DataStructureElements.Expression;
-import DataStructureElements.Ln;
-import DataStructureElements.Log;
-import DataStructureElements.Power;
-import DataStructureElements.Product;
-import DataStructureElements.Quotient;
-import DataStructureElements.Sec;
-import DataStructureElements.Sin;
-import DataStructureElements.Sum;
-import DataStructureElements.Tan;
-import DataStructureElements.UnaryExpression;
-import DataStructureElements.Variable;
+import DataStructureElements.*;
 
 /**
  *

@@ -7,9 +7,6 @@ package DataStructureElements;
 
 import static DataStructureElements.Visitor.Compare.cmp;
 import DataStructureElements.Visitor.DSEVisitor;
-import Utilities.ShrinkTree;
-import Utilities.Simplify;
-import Utilities.Stringifier;
 import java.util.*;
 
 public class Sum extends Container{
@@ -22,26 +19,6 @@ public class Sum extends Container{
     @Override
     public ArrayList<Expression> getList() {
         return (ArrayList<Expression>) holder.clone();
-    }
-    
-    @Override
-    public Expression getDerivative() {
-       Expression s;
-       ArrayList<Expression> holderD = new ArrayList<>();
-       super.addStep("Find the derivative of each term in " + Stringifier.stringify(this));
-       for (int i = 0; i < holder.size(); i++){
-           holderD.add(holder.get(i).getDerivative());
-       }
-       
-       s = new Sum(holderD);
-       s = ShrinkTree.shrink(s);
-       s = Simplify.simplifySum((Sum) s);
-       return s;
-    }
-
-    @Override
-    public Expression getIntegral() {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override

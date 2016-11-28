@@ -3,8 +3,8 @@ package Lexer;
 import java.util.ArrayList;
 
 public class Lexer {
-    private static final String separators = "+-*/^()";
-    private static final String[] reservedWords = {"sin", "cos", "tan", "ln", "log", 
+    private final String separators = "+-*/^()";
+    private final String[] reservedWords = {"sin", "cos", "tan", "ln", "log", 
         "csc", "sec", "cot", "arcsin", "arccos", "arctan", "arccsc", "arcsec", "arccot"};
     public ArrayList<Token> lex(String expression){
         char[] content = expression.toCharArray();

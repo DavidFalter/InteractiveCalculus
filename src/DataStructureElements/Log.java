@@ -17,25 +17,11 @@ public class Log extends UnaryExpression{
     public Log(Expression e) {
         this.e = e;
     }
-
-    public Expression getE() {
-        return e;
-    }       
     
     @Override
-    public Expression getDerivative() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Expression getIntegral() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public Expression getExpression() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        return e;
+    }       
 
     @Override
     public String getName() {
@@ -44,7 +30,7 @@ public class Log extends UnaryExpression{
 
     @Override
     public void accept(DSEVisitor v) {
-	throw new UnsupportedOperationException("Not supported yet.");
+	v.visitLog(this);
     }
 
     public Expression getUsub() {
